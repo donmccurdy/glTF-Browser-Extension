@@ -1,14 +1,12 @@
 (function () {
 
-  const browser = window.chrome || window.browser;
-  const webNavigation = (window.chrome||window).webNavigation;
-
-  if (!webNavigation || !browser) {
+  const browser = window.browser || window.chrome || window.msBrowser;
+  if (!browser) {
     console.warn('Missing APIs.');
     return;
   }
 
-  webNavigation.onHistoryStateUpdated.addListener((details) => {
+  browser.webNavigation.onHistoryStateUpdated.addListener((details) => {
     browser.tabs.sendMessage(details.tabId, {type: 'statechange'});
   });
 

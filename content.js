@@ -8,7 +8,7 @@
   }
 
   // Listen for navigation events.
-  const browser = window.chrome || window.browser;
+  const browser = window.browser || window.chrome || window.msBrowser;
   browser.runtime.onMessage.addListener(function (message) {
     if (message.type === 'statechange') {
       onStateChange();
