@@ -2,11 +2,17 @@
   "manifest_version": 2,
   "name": "glTF GitHub Preview",
   "version": "1.0",
-  "description": "Shows previews of glTF 2.0 models on GitHub.",
+  "description": "Adds preview button for glTF 2.0 models on GitHub.",
   "content_scripts": [
     {
-      "matches": ["*://github.com/*/blob/*.gltf"],
-      "js": ["extension.js"]
+      "matches": ["*://github.com/*"],
+      "js": ["content.js"]
     }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+     "webNavigation"
   ]
 }
