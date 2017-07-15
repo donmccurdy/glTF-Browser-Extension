@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "glTF GitHub Preview",
+  "version": "1.0",
+  "description": "Shows previews of glTF 2.0 models on GitHub.",
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*/blob/*.gltf"],
+      "js": ["extension.js"]
+    }
+  ]
+}
