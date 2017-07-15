@@ -7,14 +7,6 @@
     }
   }
 
-  // Listen for navigation events.
-  const browser = window.browser || window.chrome || window.msBrowser;
-  browser.runtime.onMessage.addListener(function (message) {
-    if (message.type === 'statechange') {
-      onStateChange();
-    }
-  });
-
   function onEnterFile () {
     // Find button group, and exit early if anything looks wrong.
     const btnGroupEl = document.querySelector('.file-actions .BtnGroup');
@@ -36,6 +28,14 @@
     // Insert button into page.
     btnGroupEl.insertBefore(previewBtnEl, btnGroupEl.firstChild);
   }
+
+  // Listen for navigation events.
+  const browser = window.browser || window.chrome || window.msBrowser;
+  browser.runtime.onMessage.addListener(function (message) {
+    if (message.type === 'statechange') {
+      onStateChange();
+    }
+  });
 
   onStateChange();
 
