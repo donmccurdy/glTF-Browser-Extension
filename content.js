@@ -1,4 +1,4 @@
-(function() {
+(function (window) {
 
   // When page changes, check if current page is a glTF file.
   function onStateChange () {
@@ -39,4 +39,4 @@
 
   onStateChange();
 
-})();
+})(this);

@@ -1,4 +1,4 @@
-(function () {
+(function (window) {
 
   const browser = window.browser || window.chrome || window.msBrowser;
   if (!browser) {
@@ -10,4 +10,4 @@
     browser.tabs.sendMessage(details.tabId, {type: 'statechange'});
   });
 
-})();
+})(this);
