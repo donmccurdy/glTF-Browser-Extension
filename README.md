@@ -1,4 +1,4 @@
-# glTF-Browser-Extension
+# glTF Preview for GitHub
 
 Adds a preview button for glTF 2.0 models on GitHub.
 
