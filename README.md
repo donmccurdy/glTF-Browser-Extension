@@ -2,6 +2,10 @@
 
 Adds a preview button for glTF 2.0 models on GitHub.
 
+## Installation
+
+Available for [Chrome](https://chrome.google.com/webstore/detail/gltf-preview-for-github/cokmplcldeedmnkojcinmmpjkpnalbci) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/gltf-github-preview/).
+
 ## Permissions
 
 > *Read and change your data on github.com.*
